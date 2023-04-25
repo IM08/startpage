@@ -15,38 +15,39 @@ body {
 }
 
 .content {
-    margin-top: 22%;
+    margin-top: 20%;
 }
 
 #time {
-    font-size: 100px;
+    font-size: 8em;
     text-align: center;
 }
 
 #date {
-    font-size: 30px;
+    font-size: 2em;
     text-align: center;
 }
 
 input {
     background-color: var(--bg);
     border: none;
-    font-size: 50px;
+    font-size: 1.5em;
     color: var(--fg);
-    border-bottom: 3px solid var(--fg);
+    border-bottom: 0.1em solid var(--fg);
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 70%;
+    width: 75%;
 } input:focus {
     border-color: var(--blue);
     outline: none;
 }
 
-#weather {
+#hello {
     position: absolute;
     top: 15px;
     right: 15px;
+    font-size: 1em;
 }
 
 a {
@@ -69,7 +70,7 @@ a:hover {
 #links {
     margin-top: 25px;
     display: flex;
-    font-size: 14px;
+    font-size: 1em;
     flex-wrap: wrap;
 }
 
@@ -83,16 +84,26 @@ a:hover {
 ul {
     list-style-type: none;
     font-weight: bold;
-    font-size: 20px;
-    padding-left: 30px;
-}
-
-#search input {
-    font-size: 20px;
+    font-size: 1.3em;
+    padding-left: 1.5em;
 }
 
 .favicon {
     margin-right: 8px;
     height: 1rem;
-    /* to use: <img class="favicon" src="https://icons.duckduckgo.com/ip3/youtube.com.ico" alt="Youtube favicon"> */
+    /* example: <img class="favicon" src="https://icons.duckduckgo.com/ip3/youtube.com.ico" alt="Youtube favicon"> */
+}
+
+/* mobile viewport changes */
+@media screen and (max-aspect-ratio: 4/3) {
+    #links {
+        display: grid;
+    }
+
+    #time {
+        font-size: 5em;
+    }
+    #date {
+        font-size: 2em;
+    }
 }

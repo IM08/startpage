@@ -9,17 +9,8 @@ function date() {
     document.getElementById("date").innerHTML = now.toDateString("en-US");
 }
 
-function weather( town ) {
-    fetch("https://wttr.in/" + town + "?format=%c+%t")
-        .then(response => response.text())
-        .then(text => {
-            document.getElementById("weather").innerHTML = text;
-        })
-}
-
 
 function main() {
     time();
     date();
-    weather("Indio");
 }
