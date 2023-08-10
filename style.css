@@ -15,25 +15,25 @@ body {
 }
 
 .content {
-    margin-top: 20%;
+    margin-top: 10%;
 }
 
 #time {
-    font-size: 8em;
+    font-size: 8vw;
     text-align: center;
 }
 
 #date {
-    font-size: 2em;
+    font-size: 2vw;
     text-align: center;
 }
 
 input {
     background-color: var(--bg);
     border: none;
-    font-size: 1.5em;
+    font-size: 1.5vw;
     color: var(--fg);
-    border-bottom: 0.1em solid var(--fg);
+    border-bottom: 0.1vw solid var(--fg);
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -47,7 +47,7 @@ input {
     position: absolute;
     top: 15px;
     right: 15px;
-    font-size: 1em;
+    font-size: 1vw;
 }
 
 a {
@@ -70,7 +70,7 @@ a:hover {
 #links {
     margin-top: 25px;
     display: flex;
-    font-size: 1em;
+    font-size: 1vw;
     flex-wrap: wrap;
 }
 
@@ -84,8 +84,8 @@ a:hover {
 ul {
     list-style-type: none;
     font-weight: bold;
-    font-size: 1.3em;
-    padding-left: 1.5em;
+    font-size: 1.1vw;
+    padding-left: 1.5vw;
 }
 
 .favicon {
@@ -94,16 +94,31 @@ ul {
     /* example: <img class="favicon" src="https://icons.duckduckgo.com/ip3/youtube.com.ico" alt="Youtube favicon"> */
 }
 
-/* mobile viewport changes */
+/* portrait (mobile) viewport changes */
 @media screen and (max-aspect-ratio: 4/3) {
+    #hello {
+        font-size: 2vw;
+    }
+
+    body {
+        width: 80%;
+    }
+
+    #date {
+        font-size: 3vw;
+    }
+
+    input {
+        font-size: 3vw;
+    }
+
     #links {
         display: grid;
     }
 
-    #time {
-        font-size: 5em;
-    }
-    #date {
-        font-size: 2em;
+    ul {
+        font-size: 4vw;
+        text-align: center;
+        padding-left: 0vw;
     }
 }
