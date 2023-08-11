@@ -1,0 +1,125 @@
+//primary colors
+$main_bg: #1e1e2e;
+$island_bg: #11111b;
+
+//font data
+$main_fonts: 'Courier New', Courier, monospace;
+$head_font_color: #c6d0f5;
+$body_font_color: #8caaee;
+$font_size_large: 8vw;
+$font_size_small: 2vw;
+$font_size_island: 1.1vw;
+
+//desktop only
+$desktop_width: 50%;
+
+//mobile only
+$mobile_width: 80%;
+$mobile_font_small: 4vw;
+
+
+/* main css */
+body {
+    font-family: $main_fonts;
+    font-size: $font_size_small;
+    background-color: $main_bg;
+    color: $head_font_color;
+    margin: auto;
+    width: $desktop_width;
+    text-align: center;
+}
+
+.content {
+    margin-top: 10%;
+}
+
+input {
+    background-color: $main_bg;
+    border: none;
+    font-size: $font_size_small;
+    color: $head_font_color;
+    border-bottom: 0.1vw solid $head_font_color;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+
+    :focus {
+        border-color: $body_font_color;
+        outline: none;
+    }
+}
+
+#island_container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.island {
+    background-color: $island_bg;
+    border-radius: 15px;
+    margin: 10px;
+    flex: 1;
+    text-align: left;
+    font-size: $font_size_island;
+
+    ul {
+        list-style-type: none;
+        font-weight: bold;
+        padding-left: 1.5vw;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: $body_font_color;
+    display: inline-block;
+    padding: 2px 0px;
+
+    ::before {
+        content: "";
+    }
+
+    :hover {
+        font-style: italic;
+        font-weight: normal;
+    }
+}
+
+
+//misc stuff
+#time {
+    font-size: $font_size_large;
+}
+
+#hello {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 1vw;
+}
+
+
+/* mobile specific */
+@media screen and (max-aspect-ratio: 4/3) {
+    body {
+        width: $mobile_width;
+    }
+
+    input {
+        font-size: $mobile_font_small;
+    }
+
+    #island_container {
+        display: grid;
+    }
+
+    .island {
+        text-align: center;
+        font-size: $mobile_font_small;
+
+        ul {
+            padding-left: 0vw;
+        }
+    }
+}
